@@ -1,0 +1,20 @@
+- implementer lenkeliste i egen .c-fil
+    node inneholder:
+    - neste-peker
+    - void data-peker (som kan være client eller contact eller annet)
+
+- god praksis er å implementere sitt eget nettverkslag (-grensesnitt)
+
+- 2021-04-13 CBRA video ekstra aktuell
+
+- send ny heartbeat utenfor selectløkken (i klient)
+    - select ha timeout på 10 s
+
+- hovedhendelsesløkken bør være på 1 sekund, og sjekke om noen timeouts har gått ut.
+- siste heartbeatmelding bør huskes sånn at vi kan slå opp 
+
+kan skrive login@jorunn.ifi.uio.no
+
+// designvalg
+
+Var ikke godt spesifisert hvordan skille servermelding fra annen client-melding, så derfor antar jeg at server adresse og port er server, og alle andre meldinger er klienter.
